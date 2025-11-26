@@ -1,0 +1,382 @@
+@use "../base/variables" as *;
+#mikiWrapper {
+  // 共通設定
+  background-color: $color_bg;
+
+  .miki_body {
+    background-color: $color_bg;
+
+    max-width: 744px;
+    margin-inline: auto;
+    z-index: 5;
+    border-right: 5px solid $color_heading;
+    border-left: 5px solid $color_heading;
+  }
+
+  .background_pc {
+    position: fixed;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .miki_text {
+    font-family: $font_jp;
+    color: $color_text;
+    font-weight: $font_bold;
+    text-align: center;
+    @media (width > 600px) {
+      font-size: $font_heading3;
+      line-height: 1.7;
+    }
+  }
+
+  .miki_text_big {
+    font-size: $font_heading3;
+    @media (width > 600px) {
+      font-size: $font_heading2;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .miki_text_box {
+    border: 2px solid $color_heading;
+    border-radius: $border_r;
+    margin-inline: auto;
+    margin-inline: 2rem;
+  }
+
+  .miki_text_normal {
+    font-weight: normal;
+  }
+
+  // ヘッダー
+  .miki_headerwrap {
+    .miki_container {
+      display: flex;
+      justify-content: space-between;
+      .miki_logo {
+        width: 80px;
+
+        a {
+          display: block;
+          padding-inline-start: $spacing_xs;
+          transition: 0.3s;
+          &:hover {
+            scale: (1.1);
+          }
+        }
+      }
+    }
+
+    .miki_subtitlewrap {
+      margin-block-start: $spacing_m;
+      display: flex;
+      font-weight: normal;
+      align-items: baseline;
+      justify-content: center;
+      .miki_subtitle {
+        font-size: $font_heading3;
+        @media (width > 600px) {
+          font-size: $font_heading2;
+        }
+      }
+
+      .miki_de {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .miki_headertitle {
+      padding-block-start: $spacing_s;
+      padding-block-end: $spacing_x;
+      color: $color_sectionBg;
+      font-size: $font_heading1;
+      line-height: 93%;
+      -webkit-text-stroke: 16px $color_text;
+      paint-order: stroke;
+      @media (width > 600px) {
+        font-size: 64px;
+        -webkit-text-stroke: 20px $color_text;
+      }
+    }
+    .miki_headerimage {
+      background-image: url(../images/pd_header.png);
+      background-size: cover;
+      background-position: center;
+      aspect-ratio: 5.3 / 4.7;
+      @media (width > 600px) {
+        background-image: url(../images/pd_header_tb.png);
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 5.8 / 4.2;
+      }
+    }
+  }
+
+  // 味の詳細
+  .miki_cards {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing_2xl;
+    margin-block: 120px;
+
+    .miki_card {
+      position: relative;
+      margin-block: $spacing_s;
+
+      .miki_gummy {
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        width: 80px;
+        z-index: 2;
+      }
+
+      .miki_illust {
+        position: absolute;
+        bottom: -20px;
+        right: 20px;
+        width: 80px;
+        z-index: 2;
+      }
+
+      .miki_taste {
+        position: absolute;
+        font-size: 20px;
+        top: -37px;
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        -webkit-transform: translate(-50%, -5%);
+        @media (width > 600px) {
+          font-size: $font_heading2;
+          top: -45px;
+        }
+      }
+
+      .miki_text_box {
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (width > 600px) {
+          height: 250px;
+        }
+      }
+
+      .miki_textgrape {
+        background-image: url(../images/background_grape.png);
+        background-size: cover;
+        @media (width > 600px) {
+          background-image: url(../images/background_grape_tb.png);
+        }
+      }
+
+      .miki_textpeach {
+        background-image: url(../images/background_peach.png);
+        background-size: cover;
+        @media (width > 600px) {
+          background-image: url(../images/background_peach_tb.png);
+        }
+      }
+
+      .miki_textmuscat {
+        background-image: url(../images/background_muscat.png);
+        background-size: cover;
+        @media (width > 600px) {
+          background-image: url(../images/background_muscat_tb.png);
+        }
+      }
+
+      .miki_textcoke {
+        background-image: url(../images/background_coke.png);
+        background-size: cover;
+        @media (width > 600px) {
+          background-image: url(../images/background_coke_tb.png);
+        }
+      }
+    }
+  }
+
+  // 吹き出し
+  .miki_QandA {
+    margin-inline: $spacing_s;
+    .miki_Awrap,
+    .miki_Qwrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .miki_QandAtextbox_left,
+    .miki_QandAtextbox_right,
+    .miki_QandAtextbox_middle {
+      background-color: $color_textbox;
+      border-radius: $border_r;
+      position: relative;
+      padding-block: 2rem;
+      margin-inline: 1rem;
+      text-align: center;
+    }
+    .miki_QandAtextbox_left::after {
+      background-color: $color_textbox;
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+
+    .miki_QandAtextbox_right::after {
+      background-color: $color_textbox;
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      right: 10%;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .miki_QandAtextbox_middle::after {
+      background-color: $color_textbox;
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      right: 50%;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+    .miki_QandAmofies {
+      max-width: 120px;
+      height: auto;
+      margin: $spacing_s;
+      @media (width > 600px) {
+        max-width: 170px;
+      }
+    }
+    .miki_QandApure {
+      align-self: flex-end;
+    }
+    .miki_QandAhappymofies img {
+      width: 100vw;
+    }
+  }
+
+  //  ポイント
+  .miki_point {
+    margin-block-start: $spacing_xl;
+    padding-block-end: $spacing_2xl;
+
+    .miki_pheaderwrap {
+      .miki_secheader {
+        font-size: $font_heading3;
+        @media (width > 600px) {
+          font-size: $font_heading2;
+        }
+      }
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      margin-inline: $spacing_2xl;
+      .miki_pointimg {
+        position: absolute;
+        left: 33%;
+        bottom: -60%;
+        width: 80px;
+        overflow: hidden;
+        @media (width > 600px) {
+          width: 95px;
+          bottom: -40%;
+        }
+      }
+    }
+    .miki_sectext {
+      background-color: $color_sectionBg;
+      text-align: start;
+      padding-inline: $spacing_m;
+      padding-block: $spacing_x;
+      font-weight: normal;
+      @media (width > 600px) {
+        font-size: 20px;
+      }
+    }
+  }
+  // ページトップに戻る
+  .miki_topback {
+    a {
+      img {
+        position: fixed;
+        right: $spacing_s;
+        bottom: $spacing_s;
+        width: 100px;
+        z-index: 10;
+
+        opacity: 0;
+        transform: translateY(30px); // ← 下に隠しておく
+        pointer-events: none;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      &.active img {
+        opacity: 1;
+        transform: translateY(0); // ← 下から出現
+        pointer-events: auto;
+      }
+
+      &.active:hover img {
+        transform: translateY(-10px); // ← active状態のときだけふわっと浮く
+      }
+    }
+  }
+
+  // トップページに戻るボタン
+  .miki_topbutton {
+    margin-inline: auto;
+    margin-block-end: $spacing_xl;
+    margin-block-start: $spacing_m;
+    a {
+      background-color: $color_heading;
+      padding: 0.8rem 1rem;
+      margin-block-start: 3rem;
+      border-radius: 32px;
+      color: $color_sectionBg;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 0 #ed6b60;
+      @media (width > 600px) {
+        font-size: 20px;
+      }
+
+      &:hover {
+        transform: translateY(4px);
+        box-shadow: none;
+      }
+    }
+  }
+
+  .miki_snswrap {
+    display: flex;
+    gap: $spacing_xl;
+    justify-content: center;
+    padding: $spacing_s;
+    .miki_snsitem {
+      width: 35px;
+    }
+  }
+
+  .miki_copywrite {
+    background-color: lightgray;
+    text-align: center;
+    padding-block: $spacing_xs;
+  }
+}

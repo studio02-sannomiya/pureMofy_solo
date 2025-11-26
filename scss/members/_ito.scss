@@ -1,0 +1,160 @@
+.ito_child01 {
+  position: absolute;
+  margin-right: 35px;
+}
+.ito_child02 {
+  position: absolute;
+  right: 0;
+}
+
+.ito_title {
+  flex-direction: column;
+  text-align: center;
+  line-height: 2.5;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-family: "kite one";
+}
+.ito_title p {
+  font-family: "kiwi maru";
+  margin-right: 5px;
+}
+
+.ito__images {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 15px;
+  width: 382px;
+  height: auto;
+  background-color: antiquewhite;
+}
+
+.ito_section_01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(218, 89, 89);
+
+  .ito_text01 {
+    width: 382px;
+    height: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 2;
+    padding: 1rem;
+  }
+
+  .ito_text01 h2 {
+    margin-top: 16px;
+    font-family: "kite one";
+  }
+  .ito_text01 p {
+    font-family: "kiwi maru";
+  }
+
+  .ito__images {
+    background-color: rgb(218, 89, 89);
+  }
+}
+
+.ito_section_02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(95, 225, 145);
+
+  .ito__images {
+    background-color: rgb(95, 225, 145);
+  }
+  .ito_text02 {
+    width: 382px;
+    height: auto;
+    text-align: center;
+    line-height: 2;
+    padding: 1rem;
+  }
+}
+
+.ito_text02 h2 {
+  margin-top: 16px;
+  font-family: "kite one";
+}
+.ito_text02 p {
+  font-family: "kiwi maru";
+}
+
+.ito_section_03 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 164, 164);
+
+  .ito__images {
+    background-color: rgb(218, 164, 164);
+  }
+  .ito_text03 {
+    width: 382px;
+    height: auto;
+
+    text-align: center;
+    line-height: 2;
+    padding: 1rem;
+  }
+}
+.ito_text03 h2 {
+  margin-top: 16px;
+  font-family: "kite one";
+}
+.ito_text03 p {
+  font-family: "kiwi maru";
+}
+
+.ito_section_04 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(196, 157, 200);
+
+  .ito__images {
+    background-color: rgb(196, 157, 200);
+  }
+
+  .ito_text04 {
+    width: 382px;
+    height: auto;
+    text-align: center;
+    line-height: 2;
+    padding: 1rem;
+  }
+}
+
+.ito_text04 h2 {
+  margin-top: 16px;
+  font-family: "kite one";
+}
+.ito_text04 p {
+  font-family: "kiwi maru";
+}
+
+.ito_gummy {
+  margin-right: 250px;
+}
+
+@media screen and (min-width: 742px) {
+  .ito_summary {
+    display: inline;
+  }
+  .ito_detail {
+    display: inline;
+  }
+}
+@media screen and (max-width: 742px) {
+  .ito_summary {
+    display: inline;
+  }
+  .ito_detail {
+    display: none;
+  }
+}

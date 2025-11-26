@@ -1,0 +1,94 @@
+@use "ress";
+@use "../base" as *;
+// -------------------------------
+
+header {
+  .drawerButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    // background-color: #4efbbf;
+    background-color: $color_heading;
+    position: fixed; // 配置を固定する
+    top: 24px; // 上から10px
+    right: 16px; // 右から10px
+    z-index: 10000;
+
+    @media (width >= 800px) {
+      display: none;
+    }
+
+    // 3本線作成
+    span {
+      display: block;
+      width: 38px;
+      height: 4px;
+      background-color: $color_sectionBg;
+      border-radius: 4px;
+      position: absolute; // 自由に配置したい要素にabsolute
+      transition: 0.3s all linear;
+    }
+
+    span:nth-child(1) {
+      top: 10px;
+      inset-inline: 0; // positionで設置できる範囲内の横方向を0
+      margin-inline: auto;
+    }
+
+    span:nth-child(2) {
+      inset: 0;
+      margin: auto;
+    }
+
+    span:nth-child(3) {
+      bottom: 10px;
+      inset-inline: 0;
+      margin-inline: auto;
+    }
+  }
+
+  .drawerButton:hover {
+    background-color: #e17066; //ホバー背景色
+  }
+
+  .drawerButton.active {
+    span:nth-child(1) {
+      transform-origin: left top; // 起点の変更,中心から左上に
+      transform: rotate(45deg);
+      left: 13px;
+    }
+
+    span:nth-child(2) {
+      transform: scale(0);
+    }
+
+    span:nth-child(3) {
+      transform-origin: left bottom;
+      transform: rotate(-45deg);
+      left: 13px;
+    }
+  }
+
+  //ドロワーメニュー
+  .drawerMenu {
+    width: 100%;
+    height: 100dvh; // スマホ向けの画面高さ配置方法,表示領域がずっと100
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: -150vh;
+    right: 0;
+    transition: top 0.3s ease-out;
+
+    @media (width >= 800px) {
+      position: static;
+      height: auto;
+    }
+  }
+}
+
+.drawerMenu.active {
+  top: 0;
+}

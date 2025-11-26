@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>株式会社エスニー：ピュアモフグミ公式サイト</title>
+        <meta name="description" content="現在設計中" />
+        <!-- ファビコン -->
+        <link rel="icon" href="https://www.example.com/favicon.ico" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- スタイルCSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- OGP -->
+        <meta property="og:title" content="サービス名 | 会社名" />
+        <meta
+            property="og:description"
+            content="ここにサービスや会社の説明を入れます。SNSでシェアされたときに表示されるので、魅力を伝える一文にしましょう。（100〜150文字程度）"
+        />
+        <meta property="og:url" content="https://example.com/service" />
+        <meta property="og:site_name" content="会社名 / サービス名" />
+        <meta property="og:image" content="https://example.com/images/service-ogp.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kite+One&family=Noto+Serif+TC:wght@200..900&family=Philosopher&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kite+One&family=Kiwi+Maru&family=Noto+Serif+TC:wght@200..900&family=Philosopher&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="js/matsuo_drawer.js" async></script>
+        <script src="js/matsuo_onclickmodal.js" async></script>
+    </head>
+
+    <body class="matsuo_body" id="yamadaWrapper">
+        <div class="overlay" id="overlay" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1" id="modal">
+                <div class="modal-header">
+                    <div id="modalTitle" class="modal-title"></div>
+                    <button class="close-btn" id="closeBtn" aria-label="閉じる">✕</button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+
+        <div class="matsuo_bg">
+            <div class="cover-home">
+                <header class="page-header">
+                    <div class="hd-wraper01">
+                        <h1 class="left">
+                            <a href="index.html"
+                                ><img class="logo" src="images/rogo.png" alt="ピュアもふGUMMY ホーム"
+                            /></a>
+                        </h1>
+
+                        <!-- ドロワーメニューのボタン -->
+                        <button class="drawerButton" onclick="drawerButton()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <div class="drawerMenu">
+                            <nav class="drawerMenu-nv">
+                                <ul class="main-nav">
+                                    <li><a href="#">Top</a></li>
+                                    <li><a href="#">Taste</a></li>
+                                    <li><a href="#">Character</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="sp-show">
+                                <img src="images/Mofy01.png" alt="モフィーの画像" />
+                            </div>
+
+                            <div class="hd-wraper02">
+                                <div class="buy-wrapper">
+                                    <a href="webStore.html" class="btn">ご購入はこちら</a>
+                                </div>
+                                <ul class="sns-nav">
+                                    <li>
+                                        <a href="#"><img src="/images/logo-black.png" alt="X" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="/images/Facebook_Logo_Primary.png" alt="Facebook" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img src="/images/Instagram_Glyph_Gradient.png" alt="Instagram"
+                                        /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <main class="matsuo_main">
+                <div class="matsuo_fv">
+                    <img src="images/mainvisual.png" alt="メインビジュアル画像" class="mainvisual" />
+                    <!-- タブレット画面比のみ表示 -->
+                    <div class="comment">
+                        <p>
+                            これ、小分けになってるからみんなで分けやすいし、<br />
+                            休み時間のおやつにめっちゃちょうどいいんよ！🍬
+                        </p>
+                        <p>
+                            フルーツ系とかスイーツっぽい味とか、<br />
+                            フレーバーいっぱいあるから“次どれ食べる？”って話すだけでも盛り上がるやつ✨
+                        </p>
+                        <p>
+                            しかもただ甘いだけじゃなくて、ビタミンとか栄養もちゃんと入ってるから、<br />
+                            罪悪感ナシで食べれるの最高じゃない？💖
+                        </p>
+                    </div>
+                    <div class="comment_bottom">
+                        <div class="catchcopy">
+                            <p>
+                                にゃんともかわいい<br />
+                                放課後スイーツ。
+                            </p>
+                        </div>
+                        <div class="collaboration">
+                            <img src="images/influencer.png" alt="インフルエンサーの画像" />
+                            <p>人気インフルエンサーとコラボ中!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ここに伊藤さんのセクションを入れる -->
+                <section id="ito_wrap">
+                    <!--テキスト欄-->
+                    <div class="ito_title">
+                        <h2>Product</h2>
+                        <p>ピュアモフグミは、もふっとかわいい肉球型のグミ。</p>
+                        <p>コラーゲンやビタミン入りだから、食べながらちょっと得した気分になれるグミ。</p>
+                    </div>
+                    <!--画像-->
+
+                    <section class="ito_header">
+                        <!--コーラ-->
+                        <div class="ito_section ito_section_01">
+                            <div class="ito__images">
+                                <img src="images/cola.png" width="135" height="135" />
+                                <!--グミゾーン-->
+                            </div>
+                            <div class="ito_text01">
+                                <h2>Cola</h2>
+                                <p>コーラ味<br /></p>
+                                <p>
+                                    <span class="ito_summary">甘さと爽快感が一緒にやってくる。<br /></span>
+                                    <span class="ito_detail">冷やして食べて夏の暑さもリフレッシュ</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!--マスカット-->
+                        <div class="ito_section_02">
+                            <div class="ito_text02">
+                                <h2>Muscat</h2>
+                                <p>マスカット味<br /></p>
+                                <p>
+                                    <span class="ito_summary">リフレッシュしたい時にぴったり。<br /></span>
+                                    <span class="ito_detail">すっきりとした甘さが広がる<br /></span>
+                                </p>
+                            </div>
+                            <div class="ito__images">
+                                <img src="images/mascat.png" width="135" height="135" alt="" />
+                            </div>
+                        </div>
+                        <!--ピーチ-->
+                        <div class="ito_section_03">
+                            <div class="ito__images">
+                                <img src="images/peach.png" width="135" height="135" alt="" />
+                            </div>
+                            <div class="ito_text03">
+                                <h2>Peach</h2>
+                                <p>ピーチ味<br /></p>
+                                <p>
+                                    <span class="ito_summary">やさしい桃の甘さが広がる<br /></span>
+                                    <span class="ito_detail">ふわっと広がる桃の味。</span>
+                                </p>
+                            </div>
+                            <!--グレープ-->
+                        </div>
+                        <div class="ito_section_04">
+                            <div class="ito_text04">
+                                <h2>Grape</h2>
+                                <p>グレープ味<br /></p>
+                                <p>
+                                    <span class="ito_summary">濃厚な甘みとほどよい酸味。<br /></span>
+                                    <span class="ito_detail">ちょっと大人のぶどう。<br /></span>
+                                </p>
+                            </div>
+                            <div class="ito__images">
+                                <img src="images/grape.png" width="135" height="135" alt="" />
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="character">
+                    <h1>ピュアモフィー</h1>
+                    <div class="character_wrap">
+                        <div class="visual">
+                            <div class="topic dreamskill">
+                                <p
+                                    class="dream click-image"
+                                    data-title="ピュアモフィーの夢"
+                                    data-text="ピュアもふグミがオリコンチャート１位になることだよ🎵"
+                                >
+                                    夢
+                                </p>
+                                <p
+                                    class="skill click-image"
+                                    data-title="ピュアモフィーの特技"
+                                    data-text="くしゃみが出そうになっても、止めることができるよ⭐️"
+                                >
+                                    特技
+                                </p>
+                            </div>
+                            <div class="characterImage">
+                                <img src="images/pyuamofu.png" alt="モフィー達の画像" />
+                            </div>
+                            <div class="topic favoritetreasure">
+                                <p
+                                    class="favorite click-image"
+                                    data-title="ピュアモフィーの好物"
+                                    data-text="割となんでもいけるくちだよ❤️和菓子が特に好き"
+                                >
+                                    好物
+                                </p>
+                                <p
+                                    class="treasure click-image"
+                                    data-title="ピュアモフィーの宝物"
+                                    data-text="ありすぎて困っちゃう😢預金通帳は肌身離さず持っているよ"
+                                >
+                                    宝物
+                                </p>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                ふわふわの羽を持つ<br />
+                                『ピュアモフィー』<br />
+                                まんまるなボディとキラキラおめめが
+                                チャームポイントです甘くて優しい時間を届けるためにふわっと飛んでやってきます♪<br />
+                                ちょっぴり好奇心旺盛でみんなを笑顔にするのが好き。<br />
+                                『もぐもぐにゃ〜♪』
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="matsuo_footer">
+                <div id="pageup">
+                    <a href="#"><img src="images/top_jump.png" alt="" /></a>
+                </div>
+                <div class="copyright">
+                    <small>&copy; studio2 </small>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

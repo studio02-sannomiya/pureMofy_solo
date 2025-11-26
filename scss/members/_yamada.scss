@@ -1,0 +1,222 @@
+@use "../base/variables" as *;
+@use "../vendors/drawer" as *;
+
+// body#yamadaWrapper {
+//   font-family: $font_jp;
+//   font-weight: $font_bold;
+//   font-style: normal;
+body {
+    font-family: $font_jp;
+    font-weight: $font_bold;
+    font-style: normal;
+}
+
+.cover-home {
+    background-color: $color_drawerBg;
+    width: auto;
+    height: 200px;
+    // min-width: 800px;
+
+    @media (width < 800px) {
+        width: auto;
+        height: 100px;
+
+        @media (width < 430px) {
+            width: auto;
+            // height: 100dvh;
+        }
+    }
+
+    .page-header {
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @media (width < 800px) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+    }
+
+    .hd-wraper01 {
+        display: flex;
+        align-items: center;
+
+        @media (width < 800px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .hd-wraper02 {
+        display: flex;
+        align-items: center;
+
+        @media (width < 800px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .sp-show {
+        display: none;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 150px; // 最大幅を設定して、画像が大きくなりすぎないようにする
+        }
+
+        @media (width < 800px) {
+            display: block;
+        }
+    }
+
+    .buy-wrapper {
+        flex-shrink: 0;
+        .btn {
+            display: block;
+            padding-block: $spacing_s;
+            padding-inline: $spacing_xl;
+            margin-inline-end: $spacing_x;
+            margin-block: $spacing_2xl;
+            text-align: center;
+            text-decoration: none;
+            font-size: $font_text;
+            background-color: $color_heading;
+            color: $color_sectionBg;
+            border-radius: 32px;
+            transition: background-color 0.3s ease; //ホバー時のアニメーション
+
+            @media (width < 800px) {
+                margin-inline-end: 0;
+
+                @media (width < 430px) {
+                    font-size: $font_text;
+                    margin-block: $spacing_xl;
+                    padding-block: $spacing_s;
+                    padding-inline: 45px;
+                }
+            }
+        }
+    }
+    .btn:hover {
+        background-color: #e17066; //ホバー背景色
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+        margin-inline-start: $spacing_s;
+        margin-block-start: $spacing_s;
+        margin-inline-end: 50px;
+
+        @media (width < 800px) {
+            position: absolute; /* 親要素を基準に配置 */
+            top: $spacing_xs;
+            left: $spacing_xs;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+
+            @media (width < 430px) {
+                width: 70px;
+                height: 70px;
+                top: $spacing_s;
+                left: $spacing_s;
+            }
+        }
+    }
+
+    .drawerMenu {
+        @media (width < 800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $color_drawerBg;
+        }
+
+        .drawerMenu-nv {
+            display: block;
+            height: auto;
+            position: static;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-around;
+
+            @media (width < 800px) {
+                flex-direction: column;
+                text-align: center;
+                gap: $spacing_2xl;
+                margin-block: $spacing_2xl;
+                margin-block-start: 150px;
+
+                @media (width < 430px) {
+                    font-size: $font_heading3;
+                    gap: $spacing_m;
+                    margin-block: $spacing_s;
+                    margin-block-end: 54px;
+                }
+            }
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                    font-size: $font_heading2;
+                    color: $color_text;
+                    padding-inline: 2rem;
+
+                    @media (width < 430px) {
+                        font-size: $font_heading3;
+                    }
+                }
+                a:hover {
+                    color: $color_heading; //ホバー背景色
+                }
+            }
+        }
+
+        .sns-nav {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                margin-block: $spacing_2xl;
+                padding-inline: $spacing_m;
+
+                @media (width < 800px) {
+                    margin-block: 0;
+
+                    @media (width < 430px) {
+                        margin-block: 0;
+                    }
+                }
+
+                a {
+                    img {
+                        width: 40px; // ロゴのサイズを調整
+                        height: auto;
+
+                        @media (width < 430px) {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sns-nav img:hover {
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+// }

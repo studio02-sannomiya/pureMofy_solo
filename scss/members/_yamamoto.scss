@@ -1,0 +1,230 @@
+@use "../base/variables" as *;
+
+body#yamamotoWrapper {
+  background-color: $color_bg;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
+  #splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color_bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: splash-hide 1s ease forwards;
+    animation-delay: 1.5s;
+  }
+
+  #splash img {
+    width: auto;
+    animation: fadein 1.5s ease;
+
+    @media (width <=744px) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 100%;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes splash-hide {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 375px;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block-start: 1rem;
+
+    @media (width >=744px) {
+      padding-inline: 2rem;
+    }
+    .logo {
+      width: 62px;
+      height: 62px;
+      @media (width >= 744px) {
+        width: 91px;
+        height: 91px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .sns {
+      display: flex;
+      gap: 30px;
+      img {
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 375px;
+    padding-block-end: 3rem;
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-block-start: 125px;
+
+      @media (width >= 744px) {
+        margin-block-start: 180px;
+      }
+
+      @media (width >= 1200px) {
+        margin-block-start: 150px;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block-end: 5rem;
+
+        p {
+          font-size: 2.5rem;
+          font-weight: 800;
+          text-shadow: 0px 20px 8px rgba(0, 0, 0, 0.134);
+
+          color: #5a3821;
+          @media (width >=744px) {
+            font-size: 4rem;
+          }
+
+          @media (width >= 1200px) {
+            font-size: 5rem;
+          }
+        }
+      }
+
+      // 肉球
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        width: 100%;
+
+        .float {
+          width: 50px;
+          height: 45px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .float:nth-child(1) {
+          animation: jump 5s linear infinite;
+          animation-delay: 0.8s;
+        }
+        .float:nth-child(2) {
+          animation: jump 5s linear infinite;
+          animation-delay: 1.8s;
+        }
+        .float:nth-child(3) {
+          animation: jump 5s linear infinite;
+          animation-delay: 2.8s;
+        }
+        .float:nth-child(4) {
+          animation: jump 5s linear infinite;
+          animation-delay: 3.8s;
+        }
+
+        @keyframes jump {
+          0%,
+          20%,
+          100% {
+            transform: translateY(0);
+          }
+          10% {
+            transform: translateY(-40px);
+          }
+        }
+      }
+
+      //キャラクター
+      .animeArea {
+        width: 100%;
+        height: 90px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+          0% {
+            left: -100px;
+            opacity: 0;
+          }
+          10% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 1;
+          }
+          100% {
+            left: 100%;
+            opacity: 0;
+          }
+        }
+      }
+      .button {
+        text-align: center;
+
+        a {
+          background-color: $color_heading;
+          padding: 0.8rem 1rem;
+          margin-block-start: 3rem;
+          border-radius: 32px;
+          color: $color_sectionBg;
+          display: inline-block;
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+          box-shadow: 0 4px 0 #ed6b60;
+
+          &:hover {
+            transform: translateY(4px);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
