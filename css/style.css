@@ -1241,7 +1241,7 @@ body {
 .cover-home {
   background-color: #f8e6e4;
   width: auto;
-  height: 200px;
+  height: 100px;
 }
 @media (width < 800px) {
   .cover-home {
@@ -1279,6 +1279,8 @@ body {
 .cover-home .hd-wraper02 {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
 }
 @media (width < 800px) {
   .cover-home .hd-wraper02 {
@@ -1307,8 +1309,6 @@ body {
   display: block;
   padding-block: 16px;
   padding-inline: 52px;
-  margin-inline-end: 32px;
-  margin-block: 64px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -1337,9 +1337,6 @@ body {
   min-width: 40px;
   width: 130px;
   height: 130px;
-  margin-inline-start: 16px;
-  margin-block-start: 16px;
-  margin-inline-end: 50px;
 }
 @media (width < 800px) {
   .cover-home .logo {
@@ -1416,11 +1413,10 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 .cover-home .drawerMenu .sns-nav li {
   min-width: 30px;
-  margin-block: 64px;
-  padding-inline: 20px;
 }
 @media (width < 800px) {
   .cover-home .drawerMenu .sns-nav li {

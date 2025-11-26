@@ -14,7 +14,7 @@ body {
 .cover-home {
     background-color: $color_drawerBg;
     width: auto;
-    height: 200px;
+    height: 100px;
     // min-width: 800px;
 
     @media (width < 800px) {
@@ -52,6 +52,8 @@ body {
     .hd-wraper02 {
         display: flex;
         align-items: center;
+        gap:1rem;
+        padding-inline: 1rem;
 
         @media (width < 800px) {
             flex-direction: column;
@@ -80,8 +82,8 @@ body {
             display: block;
             padding-block: $spacing_s;
             padding-inline: $spacing_xl;
-            margin-inline-end: $spacing_x;
-            margin-block: $spacing_2xl;
+            // margin-inline-end: $spacing_x;
+            // margin-block: $spacing_2xl;
             text-align: center;
             text-decoration: none;
             font-size: $font_text;
@@ -110,9 +112,9 @@ body {
         min-width: 40px;
         width: 130px;
         height: 130px;
-        margin-inline-start: $spacing_s;
-        margin-block-start: $spacing_s;
-        margin-inline-end: 50px;
+        // margin-inline-start: $spacing_s;
+        // margin-block-start: $spacing_s;
+        // margin-inline-end: 50px;
 
         @media (width < 800px) {
             position: absolute; /* 親要素を基準に配置 */
@@ -189,11 +191,12 @@ body {
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            gap: 1rem;
 
             li {
                 min-width: 30px;
-                margin-block: $spacing_2xl;
-                padding-inline: $spacing_m;
+                // margin-block: $spacing_2xl;
+                // padding-inline: $spacing_m;
 
 
                 @media (width < 800px) {
