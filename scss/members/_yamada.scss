@@ -14,12 +14,13 @@ body {
 .cover-home {
     background-color: $color_drawerBg;
     width: auto;
-    height: 100px;
+    padding: 1rem;
+    // height: 100px;
     // min-width: 800px;
 
     @media (width < 800px) {
         width: auto;
-        height: 100px;
+        // height: 100px;
 
         @media (width < 430px) {
             width: auto;
@@ -42,6 +43,7 @@ body {
     .hd-wraper01 {
         display: flex;
         align-items: center;
+        gap:2rem;
 
         @media (width < 800px) {
             flex-direction: column;
@@ -110,8 +112,7 @@ body {
 
     .logo {
         min-width: 40px;
-        width: 130px;
-        height: 130px;
+        max-width: 80px;
         // margin-inline-start: $spacing_s;
         // margin-block-start: $spacing_s;
         // margin-inline-end: 50px;
@@ -122,7 +123,7 @@ body {
             left: $spacing_xs;
             margin: 0;
             width: 100px;
-            height: 100px;
+            // height: 100px;
 
             @media (width < 430px) {
                 width: 70px;
@@ -150,6 +151,7 @@ body {
         .main-nav {
             display: flex;
             justify-content: space-around;
+            gap:1rem;
 
             @media (width < 800px) {
                 flex-direction: column;
@@ -174,7 +176,7 @@ body {
                     display: block;
                     font-size: $font_heading2;
                     color: $color_text;
-                    padding-inline: 2rem;
+                    // padding-inline: 2rem;
 
                     @media (width < 430px) {
                         font-size: $font_heading3;

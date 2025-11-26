@@ -821,7 +821,7 @@ img {
 }
 @media (width > 600px) {
   #mikiWrapper .miki_text_big {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 #mikiWrapper img {
@@ -863,7 +863,7 @@ img {
 }
 @media (width > 600px) {
   #mikiWrapper .miki_headerwrap .miki_subtitlewrap .miki_subtitle {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 #mikiWrapper .miki_headerwrap .miki_subtitlewrap .miki_de {
@@ -934,7 +934,7 @@ img {
 }
 @media (width > 600px) {
   #mikiWrapper .miki_cards .miki_card .miki_taste {
-    font-size: 32px;
+    font-size: 26px;
     top: -45px;
   }
 }
@@ -1067,7 +1067,7 @@ img {
 }
 @media (width > 600px) {
   #mikiWrapper .miki_point .miki_pheaderwrap .miki_secheader {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 #mikiWrapper .miki_point .miki_pheaderwrap .miki_pointimg {
@@ -1241,12 +1241,11 @@ body {
 .cover-home {
   background-color: #f8e6e4;
   width: auto;
-  height: 100px;
+  padding: 1rem;
 }
 @media (width < 800px) {
   .cover-home {
     width: auto;
-    height: 100px;
   }
 }
 @media (width < 800px) and (width < 430px) {
@@ -1269,6 +1268,7 @@ body {
 .cover-home .hd-wraper01 {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 @media (width < 800px) {
   .cover-home .hd-wraper01 {
@@ -1335,8 +1335,7 @@ body {
 }
 .cover-home .logo {
   min-width: 40px;
-  width: 130px;
-  height: 130px;
+  max-width: 80px;
 }
 @media (width < 800px) {
   .cover-home .logo {
@@ -1345,7 +1344,6 @@ body {
     left: 8px;
     margin: 0;
     width: 100px;
-    height: 100px;
   }
 }
 @media (width < 800px) and (width < 430px) {
@@ -1372,6 +1370,7 @@ body {
 .cover-home .drawerMenu .main-nav {
   display: flex;
   justify-content: space-around;
+  gap: 1rem;
 }
 @media (width < 800px) {
   .cover-home .drawerMenu .main-nav {
@@ -1396,9 +1395,8 @@ body {
 .cover-home .drawerMenu .main-nav li a {
   text-decoration: none;
   display: block;
-  font-size: 32px;
+  font-size: 26px;
   color: #5a3821;
-  padding-inline: 2rem;
 }
 @media (width < 430px) {
   .cover-home .drawerMenu .main-nav li a {
