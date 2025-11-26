@@ -107,6 +107,7 @@ body {
     }
 
     .logo {
+        min-width: 40px;
         width: 130px;
         height: 130px;
         margin-inline-start: $spacing_s;
@@ -190,8 +191,10 @@ body {
             align-items: center;
 
             li {
+                min-width: 30px;
                 margin-block: $spacing_2xl;
                 padding-inline: $spacing_m;
+
 
                 @media (width < 800px) {
                     margin-block: 0;
